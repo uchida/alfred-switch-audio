@@ -1,0 +1,14 @@
+#!/bin/bash
+query="{query}"
+[ $query = "{query}" ] && query="$@"
+device="$(echo $query | sed -e 's/ (input)$//' -e 's/ (output)$//')"
+if [[ $query =~ (input) ]]; then
+  type=input
+else
+  type=output
+fi
+if [ -x /usr/local/bin/SwitchAudioSource ]; then
+  /usr/local/bin/SwitchAudioSource -t $type -s "$device"
+elif [ -x "$(which SwitchAudioSource)" ]; then
+  SwitchAudioSource -t $type -s "$device"
+fi

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+shopt -s nocasematch
+
+query="{query}"
+[ $query = "{query}" ] && query="$@"
+
+IFS=$'\n'
+echo '<?xml version="1.0"?>'
+echo '<items>'
+for device in $(/usr/local/bin/SwitchAudioSource -a); do
+  if [[ -n $query && ! $device =~ $query ]]; then
+    continue
+  fi
+  cat <<_END_OF_ITEM_
+  <item uid="$device" arg="$device">
+    <title>$device</title>
+    <subtitle>set $device</subtitle>
+  </item>
+_END_OF_ITEM_
+done
+echo '</items>'

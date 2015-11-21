@@ -1,0 +1,37 @@
+bundleid: net.turbare.switch-audio
+category: Tools
+connections:
+  filter:
+  - destinationuid: switch
+  switch: []
+createdby: Akihiro Uchida
+description: switch audio device
+disabled: false
+name: switchaudio
+objects:
+- config:
+    argumenttype: 1
+    escaping: 0
+    keyword: switchaudio
+    queuedelaycustom: 3
+    queuedelayimmediatelyinitially: false
+    queuedelaymode: 0
+    queuemode: 1
+    script: !include 'filter'
+    title: Switch audio device
+    withspace: false
+  type: alfred.workflow.input.scriptfilter
+  uid: filter
+- config:
+    concurrently: false
+    escaping: 0
+    script: !include 'switch'
+  type: alfred.workflow.action.script
+  uid: switch
+readme: !include 'README'
+uidata:
+  filter:
+    ypos: 50.0
+  switch:
+    ypos: 50.0
+webaddress: turbare.net
