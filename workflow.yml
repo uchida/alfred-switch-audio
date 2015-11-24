@@ -12,7 +12,7 @@ objects:
 - config:
     argumenttype: 1
     escaping: 0
-    keyword: switchaudio
+    keyword: audio
     queuedelaycustom: 3
     queuedelayimmediatelyinitially: false
     queuedelaymode: 0

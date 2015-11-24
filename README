@@ -5,7 +5,7 @@ This is an Alfred 2 workflow that makes it easy to switch input and output Audio
 # Usage
 
 0. Install [switchaudio-osx](https://github.com/deweller/switchaudio-osx) and ensure SwitchAudioSource in your PATH
-1. Type `switchaudio` into Alfred followed by a space.
+1. Type `audio` into Alfred followed by a space.
 2. Begin typing the name of the device you want to switch.
 3. When you see the device you want, select it from the list as usual.
 4. Press return to switch device.
