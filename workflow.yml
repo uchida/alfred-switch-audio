@@ -5,9 +5,9 @@ connections:
   - destinationuid: switch
   switch: []
 createdby: Akihiro Uchida
-description: switch audio device
+description: switch audio input/output device
 disabled: false
-name: switchaudio
+name: alfred-switch-audio
 objects:
 - config:
     argumenttype: 1
