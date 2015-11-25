@@ -1,5 +1,8 @@
 # alfred-switch-audio
 
+[![CircleCI](https://img.shields.io/circleci/project/uchida/alfred-switch-audio.svg)](https://circleci.com/gh/uchida/alfred-switch-audio)
+[![License](https://img.shields.io/github/license/uchida/alfred-switch-audio.svg)](https://tldrlegal.com/license/creative-commons-cc0-1.0-universal)
+
 ## Description
 
 This is an Alfred 2 workflow that makes it easy to switch input/output audio devices by [switchaudio-osx](https://github.com/deweller/switchaudio-osx)
