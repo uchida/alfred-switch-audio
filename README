@@ -16,7 +16,8 @@ Download latest `alfred-switch-audio.alfredworkflow` from
 [Release page](https://github.com/uchida/alfred-switch-audio/releases).
 Open `alfred-switch-audio.alfredworkflow` with Alfred.
 
-# License
+## License
 
-This is free and unencumbered public domain software.
-For more information, see http://unlicense.org/ or the accompanying UNLICENSE file.
+[![CC0](http://i.creativecommons.org/p/zero/1.0/88x31.png "CC0")](http://creativecommons.org/publicdomain/zero/1.0/deed)
+dedicated to public domain
+
