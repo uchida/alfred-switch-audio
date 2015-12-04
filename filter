@@ -5,17 +5,21 @@ shopt -s nocasematch
 query="{query}"
 [ $query = "{query}" ] && query="$@"
 
+current=$(/usr/local/bin/SwitchAudioSource -c)
+
 IFS=$'\n'
 echo '<?xml version="1.0"?>'
 echo '<items>'
 for device in $(/usr/local/bin/SwitchAudioSource -a); do
+  state=""
+  [[ $device =~ $current ]] && state=" - current"
   if [[ -n $query && ! $device =~ $query ]]; then
     continue
   fi
   cat <<_END_OF_ITEM_
   <item uid="$device" arg="$device">
     <title>$device</title>
-    <subtitle>set $device</subtitle>
+    <subtitle>set $device$state</subtitle>
   </item>
 _END_OF_ITEM_
 done
