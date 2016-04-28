@@ -13,13 +13,13 @@ objects:
     argumenttype: 1
     escaping: 0
     keyword: audio
-    script: !include 'filter'
+    script: !include './filter'
     title: Switch audio device
   type: alfred.workflow.input.scriptfilter
   uid: filter
 - config:
     escaping: 0
-    script: !include 'switch'
+    script: !include './switch'
   type: alfred.workflow.action.script
   uid: switch
 readme: !include 'README'
